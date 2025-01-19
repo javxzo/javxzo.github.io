@@ -15,8 +15,6 @@ function createSparkles() {
     
     sparkleContainer.appendChild(sparkle);
   }
-
-
 }
 
 
@@ -63,14 +61,14 @@ const projects = [
       image: "projects/sales.png",
       title: "Supermarket Sales Dashboard",
       description: "This project was made to practice making dashboards and manipulating information in Excel. It utilizes pivot tables, advanced Excel functions, interactive controls and visualizations. The final deliverable is an interavtive and visually appealing dashboard that provides insights into the bike sales data and a fully cleaned bike sales data set. It representations information like: average income per purchase, customer age brackets, customer commute, sales region and more!",
-      github: "https://github.com/javxzo/Bike-Sales-Dashboard-Project",
+      github: "https://github.com/javxzo/Supermarket-Sales-Analysis-with-Excel",
       languages: "Excel", 
     },
     {
       image: "projects/survey.png",
       title: "Professional Survey Data Analysis",
       description: "Analyzing real survey data on professional aspects such as salary, job titles, and programming languages using interactive Power BI dashboards.",
-      github: "https://github.com/javxzo/Bike-Sales-Dashboard-Project",
+      github: "https://github.com/javxzo/Professional-Survey-Data-Analysis-in-Power-BI",
       languages: "Excel, SQL, Power BI", 
     },
     {
@@ -80,8 +78,6 @@ const projects = [
       github: "https://github.com/javxzo",
       languages: "SQL, Python, Excel, Power BI", 
     },
-    
-
   ];
   
   
@@ -167,5 +163,3 @@ const projects = [
   
   updateSkillsSection();
   
-  
-
