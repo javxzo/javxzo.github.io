@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javeria Alam Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#profile">about</a>
+      <a href="#projects-title-image">projects</a>
+      <a href="#skills">skills</a>
+      <a href="#contact-section">
+        contact me
+        <div class="contact-bg"></div>
+        <div class="contact-circle"></div>
+      </a>
+    </header>
+
+    <section id="profile">
+      <div class="profile-left">
+        <div class="profile-text">
+          <i>
+            Com Sci & Business Student... <br />
+            I like working with big data and models!
+          </i>
+        </div>
+      </div>
+
+      <div class="profile-right">
+        <div class="profile-name">
+          <div class="code-text">
+            &lt;insert&gt;&lt;some_code&gt;&lt;here&gt;
+          </div>
+          <h1>
+            <span class="first-name">javeria</span>
+            <span class="last-name">ALAM</span>
+          </h1>
+          <a href="Javeria_Alam_resume.pdf" download>
+            <button></button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="projects-title-image" id="projects-title-image">
+        <div class="title-image"></div>
+        <div class="moon-image"></div>
+      </div>
+
+      <div class="projects-content">
+        <div class="projects-container">
+          <div class="project-image">
+            <img id="project-image" src="" alt="Project Screenshot" />
+          </div>
+          <div class="project-details">
+            <h3 id="project-title">&lt;Project Title&gt;</h3>
+            <h4 id="project-subtitle">&lt;&gt;</h4>
+            <p id="project-description">
+              Project description will appear here.
+            </p>
+            <a id="github-link" href="#" target="_blank">GitHub</a>
+          </div>
+        </div>
+        <div class="navigation">
+          <button id="prev-btn">&lt;</button>
+          <button id="next-btn">&gt;</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="skills-content">
+        <div class="skills-text">
+          <h2>skills:</h2>
+          <p>click through to take a closer look!</p>
+        </div>
+        <div class="skills-chart">
+          <div class="skills-header">
+            <button id="prev-category">&lt;</button>
+            <h3 id="skills-title">languages</h3>
+            <button id="next-category">&gt;</button>
+          </div>
+          <div class="skills-grid" id="skills-grid">
+            <!-- Images will go here dynamically -->
+          </div>
+          <p class="skills-description" id="skills-description">
+            Python, SQL, Java, JavaScript, C, HTML, CSS
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-section">
+      <div class="contact-header">
+        <img src="other images/moonOne.png" alt="Moon" class="moon-image" />
+        <h1><span class="highlight">ontact me!</span></h1>
+      </div>
+      <div class="contact-buttons">
+        <a
+          href="tel:+9058059665"
+          class="contact-button"
+          onclick="copyToClipboard('+9058059665')"
+          >&lt; phone number &gt;</a
+        >
+        <a
+          href="mailto:alamjaveria.dev@gmail.com"
+          class="contact-button"
+          onclick="copyToClipboard('alamjaveria.dev@gmail.com')"
+          >&lt; email &gt;</a
+        >
+      </div>
+      <p class="contact-message">
+        Please feel welcome to contact me via phone or email!
+      </p>
+      <p class="contact-message2">Click to copy to clipboard!</p>
+      <div class="sparkle-container"></div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

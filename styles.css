@@ -1,0 +1,594 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(39, 32, 48);
+  color: rgb(226, 235, 242);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(39, 32, 48);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 10px 20px 20px; 
+  z-index: 1000;
+}
+
+header a {
+  font-family: 'Courier New', monospace;
+  color: rgb(226, 235, 242);
+  text-decoration: none;
+  font-size: 1.2rem; 
+  text-transform: lowercase;
+  position: relative;
+}
+
+header a:hover {
+  color: rgb(199, 153, 153);
+}
+
+header a:last-child {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+header a:last-child .contact-bg {
+  position: absolute;
+  background-color: rgb(39, 32, 48);
+  border: 0.1vw solid rgb(226, 235, 242);
+  border-radius: 20px;
+  width: 7.8rem;
+  height: 1.6rem;
+  left: -0.3rem;
+  z-index: -1;
+  transition: background-color 0.3s;
+}
+
+header a:last-child:hover .contact-bg {
+  background-color: rgb(59, 12, 12);
+}
+
+header .contact-circle {
+  width: 0px;
+  height: 0px;
+  background-color: rgb(199, 153, 153);
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+#profile {
+  background-color: rgb(39, 32, 48);
+  color: rgb(226, 235, 242);
+  height: 57rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 5%;
+}
+
+.profile-left,
+.profile-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-left {
+  flex: 1;
+}
+
+.profile-left .profile-text {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+
+.profile-right {
+  flex: 1;
+  align-items: flex-end;
+  position: relative;
+}
+
+.profile-right .profile-name {
+  text-align: right;
+}
+
+.profile-right h1 {
+  font-size: 6rem; 
+  line-height: 0.9; 
+  text-transform: lowercase;
+  font-family: 'ITC Benguiat', serif;
+  position: relative;
+}
+
+.profile-right .first-name {
+  font-family: 'ITC Benguiat Std', serif;
+  font-size: 9rem;
+  color: rgb(199, 153, 153);
+  font-style: italic;
+}
+
+
+.profile-right .last-name {
+  font-size: 7.3rem; 
+  color: rgb(226, 235, 242);
+  text-transform: uppercase;
+  margin-top: -3.2rem; 
+  display: block;
+}
+
+.profile-right .code-text {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  text-align: right;
+  position: absolute;
+  top: -0.7rem;
+  right: 0;
+  color: rgb(226, 235, 242);
+}
+
+.profile-right button {
+  margin-top: 0.3rem;
+  background-color: rgb(39, 32, 48);
+  border: 0.1rem solid rgb(226, 235, 242);
+  color: rgb(226, 235, 242);
+  padding: 0.4rem 0.5rem; 
+  font-size: 1.1rem; 
+  font-family: 'Glacial Indifference', sans-serif;
+  font-style: italic;
+  text-transform: lowercase;
+  border-radius: 2rem; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.profile-right button:hover {
+  background-color: rgb(199, 153, 153);
+}
+
+.profile-right button::before {
+  content: '< resume >';
+}
+
+#projects-title-image {
+  scroll-margin-top: 150px; 
+}
+
+#projects {
+  position: relative;
+  padding: 0.5rem 1rem;
+  background-color: rgb(192, 149, 150); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(39, 32, 48);
+}
+
+.projects-title-image {
+  position: relative;
+  display: flex;
+  justify-content: space-between; 
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.projects-title-image .title-image {
+  position: relative;
+  width: 35rem; 
+  height: 6.2rem;
+  background: url('./projectsTitle.png') no-repeat center;
+  background-size: contain;
+  top: -3.45rem; 
+  margin-left: 5rem;
+}
+
+.projects-title-image .moon-image {
+  position: relative;
+  width: 55rem; 
+  height: -40rem;
+  background: url('other images/moon.png') no-repeat center;
+  background-size: contain;
+  top: -4.41rem; 
+  filter: none;
+}
+
+.projects-content {
+  margin-top: 1rem; 
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0; 
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  align-items: flex-start;
+  width: 90%; 
+  gap: 4rem;
+}
+
+
+.project-image img {
+  width: 100%; 
+  max-width: auto; 
+  height: 300px; 
+  object-fit: cover; 
+  margin-top: 1rem;
+  border: 2px solid rgb(39, 32, 48);
+  border-radius: 30px;
+  box-shadow: 5px 5px 0px rgb(59, 12, 12);
+}
+
+.project-image {
+  margin-top: -4rem; 
+}
+
+.project-details {
+  flex: 1;
+  text-align: right;
+  max-width: 50rem; 
+}
+
+.project-details h3 {
+  font-size: 3.5vh;
+  font-family: 'JetBrains Mono', monospace;
+  text-shadow: 1px 1px 2px#e2ebf2;
+  color: rgb(59, 12, 12);
+  margin-bottom: 1vh;
+  margin-top: -3rem;
+  font-style: italic;
+}
+
+.project-details h3::before {
+  content: '<';
+  margin-right: 5px;
+}
+
+.project-details h3::after {
+  content: '>';
+  margin-left: 5px;
+}
+
+.project-details h4 {
+  font-size: 2.3vh;
+  font-family: 'JetBrains Mono', monospace;
+  color: rgb(59, 12, 12);
+  text-shadow: 1px 1px 2px#e2ebf2;
+  margin-bottom: 10px;
+}
+
+.project-details h4::before {
+  content: '<';
+  margin-right: 5px;
+}
+
+.project-details h4::after {
+  content: '>';
+  margin-left: 5px;
+}
+
+.project-details p {
+  font-size: 2.0vh;
+  margin-top: 3vh;
+  font-weight:100;
+  margin-bottom: 10px;
+  color: rgb(59, 12, 12);
+  font-family: 'Courier New', monospace;
+}
+
+.project-details a {
+  font-size: 1.8rem;
+  color: rgb(226, 235, 242);
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-family: 'Glacial Indifference', sans-serif;
+  font-style: italic;
+  border: 0.5rem solid rgb(59, 12, 12);
+  background-color: rgb(59, 12, 12);
+  margin-top: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20rem;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block; 
+  margin-top: 0.5rem;
+}
+
+.project-details a:hover {
+  background-color: rgb(226, 235, 242);
+  color: rgb(39, 32, 48);
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: -1rem;
+  margin-bottom: 3.5rem;
+}
+
+.navigation button {
+  background-color: rgb(192, 149, 150);
+  color: rgb(59, 12, 12); 
+  border: none;
+  padding: 0.5rem;
+  margin: 0 5px;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.navigation button:hover {
+  background-color: rgb(59, 12, 12);
+  color: rgb(226, 235, 242);
+}
+
+#skills {
+  scroll-margin-top: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3b0c0c;
+  background-size: cover;
+  
+  height: 35rem;
+  padding: 0vh 0;
+  background-attachment: local;
+  transition: background-color 0.3s ease;
+}
+
+
+.skills-content {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center; 
+  gap: 8rem;
+}
+
+.skills-text {
+  font-family: 'ITC Benguiat Std', serif;
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+}
+
+.skills-text h2{
+  text-shadow: rgb(192, 149, 150) 1px 1px 2px;
+  font-size: 5.5rem;
+  font-style: italic;
+}
+
+.skills-text p{
+  align-items: center;
+  color: rgb(192, 149, 150);
+  font-family: 'ITC Benguiat Std', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.skills-chart {
+  flex: 2;
+  text-align: center;
+  position: relative;
+}
+
+.skills-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skills-header h3 {
+  font-size: 1.8rem;
+  color: #e2ebf2;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.skills-header button {
+  all: unset; 
+  display: inline-block; 
+  margin: 0; 
+  background: none;
+  color: #e2ebf2;
+  font-size: 1.5rem;
+  padding: 1vw;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.skills-header button:hover {
+  background-color: #e2ebf2;
+  color: #3b0c0c;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skills-grid img {
+  width: auto;
+  height: 4rem;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.skills-grid img:hover {
+  transform: scale(1.2);
+  filter: brightness(0.8);
+}
+
+.skills-description {
+  margin-top: 2.2rem;
+  font-size: 1.2rem;
+  color: #e2ebf2;
+  font-family: 'JetBrains Mono', monospace;
+  font-style: italic;
+}
+
+#contact-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #272030; 
+  height: 40rem; 
+  color: #e3d9e1; 
+  text-align: center;
+  font-family: 'ITC Benguiat Std', serif ; 
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; 
+}
+
+.moon-image {
+  width: 7rem; 
+  height: auto;
+  margin-top: 1.5rem;
+  filter: drop-shadow(0 0 0.50rem rgb(255, 217, 0));
+  
+}
+
+.contact-header h1 {
+  font-size: 6rem; 
+  margin: 0;
+  margin-left: -3.2rem;
+  color: #E2EBF2;
+}
+
+.highlight {
+  text-shadow: #FC0 1px 0 10px;
+  font-style: italic;
+  font-weight: bold;
+  color: #E2EBF2;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; 
+  margin: 0.5rem 0; /
+}
+.contact-buttons a {
+  font-family: 'JetBrains Mono', monospace;
+  text-decoration: none; 
+  display: inline-block; 
+  text-align: center;
+  background-color: rgb(192,149,150); 
+  border: none;
+  border-radius: 2rem; 
+  padding: 0.4rem 1.5rem; 
+  width: 16rem; 
+  color: #2c1a33; 
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.contact-button {
+  background-color: rgb(192,149,150); 
+  border: none;
+  border-radius: 2rem; 
+  padding: 0.6rem 1rem; 
+  width: 16rem; 
+  color: #2c1a33; 
+  font-size: 0.8rem; 
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.contact-button:hover {
+  transform: scale(1.05); 
+}
+
+.contact-message {
+  font-style: italic;
+  font-weight: 100;
+  color: #b18c92; 
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.contact-message2 {
+  font-style: italic;
+  font-weight: 100;
+  color: #b18c92; 
+  font-size: 1.2rem;
+  margin-top: 0rem;
+}
+
+.sparkle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+  overflow: hidden;
+  z-index: 1;
+}
+
+.sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  animation: sparkle-fall 3s linear infinite, sparkle-twinkle 1s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes sparkle-fall {
+  0% {
+    transform: translateY(-50px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle-twinkle {
+  50% {
+    opacity: 0.5;
+  }
+}
