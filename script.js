@@ -117,12 +117,12 @@ const projects = [
     {
       title: "languages",
       items: ["Python", "SQL", "Java", "JavaScript", "C", "HTML", "CSS"],
-      images: ["python.png", "sql.png", "java.svg", "javascript.png", "c.png", "html.png", "css.png"],
+      images: ["Python.png", "SQL.png", "java.svg", "javascript.png", "C.png", "HTML.png", "CSS.png"],
     },
     {
       title: "tools",
       items: ["VBA", "DAX", "Pandas", "Numpy", "Matplotlib", "Plotly", "Scikit-learn", "Git"],
-      images: ["vba.png", "dax.png", "pandas.png", "numpy.svg", "matplotlib.png", "plotly.svg", "scikit-learn.png", "git.png"],
+      images: ["VBA.png", "DAX.png", "pandas.png", "numpy.svg", "matplotlib.png", "plotly.svg", "scikit-learn.png", "git.png"],
     },
     {
       title: "platforms",
