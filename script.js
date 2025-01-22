@@ -7,7 +7,7 @@ function createSparkles() {
     const sparkle = document.createElement('div');
     sparkle.classList.add('sparkle');
     
-    // Randomize position and delay
+    
     sparkle.style.left = Math.random() * 100 + 'vw';
     sparkle.style.animationDelay = Math.random() * 3 + 's';
     sparkle.style.animationDuration = 3 + Math.random() * 2 + 's';
